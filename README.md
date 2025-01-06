@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# To-Do List using React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
 
-## Available Scripts
+This was first coding project for an extended period, so I wanted to keep it simple and build something basic using html, css and react.
 
-In the project directory, you can run:
+### Brief
 
-### `npm start`
+To design a simple to do list app using React, that allows the user to make a list of taks that needs to be completed, and to order those taks in priority order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The user must be able to add and delete taks, and also chnage the order of priority of tasks, but moving them up or down the list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies Used.
 
-### `npm test`
+VS Code, HTML, CSS, Javacript, React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Deployment Link.
 
-### `npm run build`
+TBC
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I wanted to use React 'Use State' to be able to take a uder input and add new items to the list. I also wanted to be able to delete items from the list. I started by creating a new component , importing react use state and setting up the react functionality I needed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![alt text](/assets/TDL-photo-3.png)
 
-### `npm run eject`
+I then built the fucntions that would allow the user to add and remove new list items. I used to the trim method to ensure there was a valid user input.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![alt text](/assets/TDL-photo-4.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I also wanted to inform the user that The uitem had been added or removed with a line of text. I was planning to use useEffect for this but VSCode suggested the UseRef hook. I researched this hook and decided to use this hook instead.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+So in both the add and delete item function i added a line of code to my udpateRef variable using the .current property. After an item is added we can see in picture below the user is imformed of this.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![alt text](/assets/TDL-photo-1.png)
 
-## Learn More
+I then built the Move up and move down function to allow the user to change the priorities in their list. I did this by creating a new variable called updatedItems, and swapped the array indexes of the two items i wanted to swap. I then assigned the SetItem function to this variable to update the state of our Item state hook. The move up and move down fucntions are the same function except in reverse with a different message assigned to the UseRef.current property.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![alt text](/assets/TDL-photo-5.png).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I then built the return statement with basic JSX to create the structure for the page. This included adding the buttons needed and linking the required functions that I had already written.
 
-### Code Splitting
+![alt text](/assets/TDL-photo-6.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![alt text](/assets/TDL-photo-7.png).
 
-### Analyzing the Bundle Size
+Finally I added some basic CSS to make the page visually more appealing. I decided that I didnt want this to turn into a long CSS project. My priority is to move onto more complex react projects and hopefully learn to use tailwind for CSS. I just wanted something quick and basic for my starter project. Ised flexxbox to structure the divs in the page and some colouring and Emoji's for the buttons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+With more time I could have improved the layout but CSS styling is not my priority at the moment.
 
-### Making a Progressive Web App
+### Bugs and challenges.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I was very rusty comign into this project so the main challenge was the amount of time it was taking me to perform more basic taks, and how much external help (google) I required to learn the correct syntax.
 
-### Advanced Configuration
+I found the CSS styling really buggy with flexbox. Just alot of trial and error.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Futrue improvements.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I think I may come back to this project to perhaps add some more complex funtionality and also to improve the styling with Tailwind.

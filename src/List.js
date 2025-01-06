@@ -9,14 +9,17 @@ function ToDoList() {
 
   function handleInputChange(event){
     setNewItem(event.target.value);
-
   }
+// Function to handle the user text input to update usestate function with in put value
+
   function addItem(){
     if(newItem.trim() !== ""){
       setItems(i => [...i, newItem]);
       setNewItem("");
       updateRef.current = "Item Added";
     }
+// takes the setNewItem value and adds this to the end of the items array. ie adds the item to the list
+
 
   }
 
@@ -25,6 +28,8 @@ function ToDoList() {
     setItems(updatedItems);
     updateRef.current = "Item Removed!";
   }
+// filters for the index of all the items we do not want to remove, and creates new array updated items. This value is then used to reset the item array state.
+
 
   function moveItemUp(index){
     if(index > 0) {
@@ -33,6 +38,8 @@ function ToDoList() {
       setItems(updatedItems);
       updateRef.current = "Item Moved Up!";
     }
+// We swap the array index of 2 items to switch their place in the items array
+
 
   }
 
@@ -44,7 +51,7 @@ function ToDoList() {
       updateRef.current = "Item Moved Down!";
     }
   }
-
+// same as above, but in reverse. We also update the useRef.current, to provide the uder with a new message.
 
   return (
     <div className="to-do-list">
@@ -93,6 +100,5 @@ function ToDoList() {
       </ol>
     </div>
   )
-
 };
 export default ToDoList;
