@@ -18,7 +18,7 @@ VS Code, HTML, CSS, Javacript, React
 
 TBC
 
-### functionality
+### Functionality
 
 I wanted to use React 'Use State' to be able to take a uder input and add new items to the list. I also wanted to be able to delete items from the list. I started by creating a new component , importing react use state and setting up the react functionality I needed.
 
@@ -32,17 +32,21 @@ I also wanted to inform the user that The uitem had been added or removed with a
 
 So in both the add and delete item function i added a line of code to my udpateRef variable using the .current property. After an item is added we can see in picture below the user is imformed of this.
 
-![alt text](/assets/TDL-photo-1.png)
+![alt text](/assets/TDL-photo1.png)
 
 I then built the Move up and move down function to allow the user to change the priorities in their list. I did this by creating a new variable called updatedItems, and swapped the array indexes of the two items i wanted to swap. I then assigned the SetItem function to this variable to update the state of our Item state hook. The move up and move down fucntions are the same function except in reverse with a different message assigned to the UseRef.current property.
 
-![alt text](/assets/TDL-photo-5.png).
+![alt text](/assets/TDL-photo-5.png)
 
-I then built the return statement with basic JSX to create the structure for the page. This included adding the buttons needed and linking the required functions that I had already written.
+Below you can see the effect when we click the move up button on visiting the supermarket, if we think this is the highest priority. It is now top of the list. and the text informs us the item has been moved up.
+
+![alt text](/assets/TDL-photo-2.png)
+
+After the basic functionality was complete I then built the return statement with basic JSX to create the structure for the page. This included adding the buttons needed and linking the required functions that I had already written.
 
 ![alt text](/assets/TDL-photo-6.png)
 
-![alt text](/assets/TDL-photo-7.png).
+![alt text](/assets/TDL-photo-7.png)
 
 Finally I added some basic CSS to make the page visually more appealing. I decided that I didnt want this to turn into a long CSS project. My priority is to move onto more complex react projects and hopefully learn to use tailwind for CSS. I just wanted something quick and basic for my starter project. Ised flexxbox to structure the divs in the page and some colouring and Emoji's for the buttons.
 
